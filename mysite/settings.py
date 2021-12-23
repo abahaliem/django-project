@@ -80,7 +80,7 @@ DATABASES = {
         'NAME':'docpsd',
         'USER':'root',
         'PASSWORD':'',
-        'HOST':'localhost',
+        'HOST':'103.147.32.233',
         'PORT':'3306',
     }
 }
