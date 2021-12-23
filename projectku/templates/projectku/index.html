@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block pageTitle %}
+        {{wfm}}
+{% endblock pageTitle %}
+
+ {% block contents %}
+        {% for post in posts %}
+          <!-- Main content -->
+ <section class="content">
+        <div class="row">
+            <div class="col-12" id="accordion">
+                <div class="card card-primary card-outline">
+                    <a class="d-block w-100" data-toggle="collapse" href="#collapseOne">
+                        <div class="card-header">  
+                            <h4 class="card-title w-100 text-bold text-red">
+                                  {{post.title}}
+                            </h4>
+                        </div>
+                    </a>
+                    <div id="collapseOne" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                         {{post.body}}
+                        </div>
+                    </div>
+                </div>
+        </section>
+        {% endfor %}
+{% endblock contents %}
+

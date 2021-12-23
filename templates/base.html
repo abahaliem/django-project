@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <title>{{page_title}}</title>
+  {% include "snippets/header.html" %} 
+  <body class="hold-transition sidebar-mini layout-fixed">
+      <div class="wrapper">
+	
+    {% include "snippets/navbar.html" %} 
+      <!-- Left side column. contains the sidebar -->
+      {% include "snippets/sidebar.html" %} 
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-outline card-info">
+                <div class="card-header">
+                  {% block pageTitle %}
+                  
+                  {% endblock pageTitle %}
+                  <h3 class="card-title"> </h3>
+                </div>
+
+                <!-- /.card-header -->
+                <div class="card-body">
+                  {% block contents %}
+                 
+                  {% endblock contents %}
+                  <br>
+              </div>
+            </div>
+            <!-- /.col-->
+          </div>
+          <!-- ./row -->
+        </section>
+      </div><!-- /.content-wrapper -->
+
+      {% include "snippets/footer.html" %} 
+
+        <!-- Control Sidebar -->
+		  <aside class="control-sidebar control-sidebar-dark">
+			<!-- Control sidebar content goes here -->
+		  </aside>
+		  <!-- /.control-sidebar -->
+      <!-- Add the sidebar's background. This div must be placed
+           immediately after the control sidebar -->
+      <!-- <div class="control-sidebar-bg"></div>-->
+	  
+    </div><!-- ./wrapper -->
+
+    <!-- jQuery 2.1.4 -->
+    {% include "snippets/scripts.html" %} 
+  </body>
+</html>
